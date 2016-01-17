@@ -207,18 +207,16 @@ public class MainPreferences
 		prefs.clear();
 		prefs.putBoolean("hassave", false);
 		prefs.putInteger("scene", 0);
-		prefs.putBoolean("notfirsttime", true);
+		//prefs.putBoolean("notfirsttime", true);
 		
 		prefs.flush();
 		//System.out.println("Reseted");
 	}
 		
-	public void loadFirstTime()
+	/*public void loadFirstTime()
 	{
 		if (!prefs.getBoolean("notfirsttime"))
 		{
-			reset();
-			
 			prefs.flush();
 			//System.out.println("Load First Time");
 		}
@@ -226,5 +224,5 @@ public class MainPreferences
 		{
 			//System.out.println("Not First Time");
 		}
-	}
+	}*/
 }

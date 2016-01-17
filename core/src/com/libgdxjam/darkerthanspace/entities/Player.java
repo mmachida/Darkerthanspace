@@ -357,7 +357,7 @@ public class Player implements FinalStates, AudioId
 					sprite.setRegion(assets.skin.getRegion("charStopRight"));
 				canChangeScene = false;
 			}
-			break;
+		break;
 		case RESETGAME:
 			if (sprite.getWidth() != playerRec.getWidth())
 			{
@@ -372,7 +372,7 @@ public class Player implements FinalStates, AudioId
 					sprite.setRegion(assets.skin.getRegion("charStopRight"));
 				canChangeScene = false;
 			}
-			break;
+		break;
 		case MENU:
 			if (sprite.getWidth() != playerRec.getWidth())
 			{
@@ -516,10 +516,16 @@ public class Player implements FinalStates, AudioId
 						if (lives <= 0)
 						{
 							isDead = true;
+							
 							if (game.listEnemy.get(i).isBig())
+							{
 								game.game.audioManager.playSound(sfxDEADBIG);
+							}
 							else
+							{
 								game.game.audioManager.playSound(sfxDEAD);
+							}
+							
 							game.canResetGame = true;
 							game.gameState = RESETGAME;
 						}

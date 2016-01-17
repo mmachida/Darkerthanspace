@@ -33,7 +33,7 @@ public class MainClass extends Game
 		
 		//Prefs
 		prefs = new MainPreferences();
-		prefs.loadFirstTime();
+		//prefs.loadFirstTime();
 		
 		//Utils
 		assets = new Assets();

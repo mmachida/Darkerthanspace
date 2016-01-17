@@ -134,9 +134,6 @@ public class GameScreen extends ScreenInterface implements FinalStates, LightCol
 	//State
 	public int gameState;
 	
-	//New Game or Continue
-	private boolean isNewGame;
-	
 	public GameScreen(MainClass game)
 	{
 		super(game);
@@ -145,12 +142,6 @@ public class GameScreen extends ScreenInterface implements FinalStates, LightCol
 	
 	public void initialize()
 	{
-		//NewGame
-		if (firstFrame)
-			isNewGame = game.isNewGame;
-		else if (isNewGame)
-			isNewGame = game.isNewGame;
-		
 		//Screen
 		resW = 1280;
 		resH = 768;
@@ -210,7 +201,7 @@ public class GameScreen extends ScreenInterface implements FinalStates, LightCol
 		
 		//CheckSave
 		int sceneSaved = 0;
-		if (isNewGame)
+		if (game.isNewGame)
 		{
 			sceneSaved = 0;
 			game.prefs.reset();
@@ -394,6 +385,69 @@ public class GameScreen extends ScreenInterface implements FinalStates, LightCol
 			}
 		}
 		
+		//Save
+		if (canSaveProgress)
+		{
+			if (!isBombPlanted)
+			{
+				game.isNewGame = false;
+				
+				gameState = TEXT;
+				game.prefs.save(
+						true,
+						9,
+						player.hasFlashLight,
+						player.hasMap, 
+						player.hasGun,
+						
+						//S1
+						eventInGame.s1t1id0,
+						eventInGame.s1t1id1,
+						eventInGame.s1t3id0,
+						eventInGame.s1t3id1,
+						eventInGame.s1t3id2,
+						
+						//S2
+						eventInGame.s2t1id0,
+						
+						//S3
+						eventInGame.s3t3id0,
+						
+						//S5
+						eventInGame.s5t3id0,
+						
+						//S6
+						eventInGame.s6t3id0,
+						
+						//S7
+						eventInGame.s7t0id2,
+						
+						//S8
+						eventInGame.s8t3id0,
+						
+						//S9
+						eventInGame.s9t1id1,
+						eventInGame.s9t1id2,
+						eventInGame.s9t1id3,
+						
+						//S10
+						eventInGame.s10t0id2,
+						
+						//S12
+						eventInGame.s12t3id0,
+						eventInGame.s12t3id1
+						);
+				
+				game.prefs.saveInventory(player.getListItem().size, player.getListItem());
+			}
+			else
+			{
+				defaultText = "[YELLOW]system:[]\ncan't save if the bomb is planted.";
+				canDefaultText = true;
+			}
+			canSaveProgress = false;
+		}
+		
 		//Not Paused
 		if (gameState != PAUSE)
 		{
@@ -407,67 +461,6 @@ public class GameScreen extends ScreenInterface implements FinalStates, LightCol
 			{
 				canDebug = !canDebug;
 			}*/
-			
-			//Save
-			if (canSaveProgress)
-			{
-				if (!isBombPlanted)
-				{
-					gameState = TEXT;
-					game.prefs.save(
-							true,
-							9,
-							player.hasFlashLight,
-							player.hasMap, 
-							player.hasGun,
-							
-							//S1
-							eventInGame.s1t1id0,
-							eventInGame.s1t1id1,
-							eventInGame.s1t3id0,
-							eventInGame.s1t3id1,
-							eventInGame.s1t3id2,
-							
-							//S2
-							eventInGame.s2t1id0,
-							
-							//S3
-							eventInGame.s3t3id0,
-							
-							//S5
-							eventInGame.s5t3id0,
-							
-							//S6
-							eventInGame.s6t3id0,
-							
-							//S7
-							eventInGame.s7t0id2,
-							
-							//S8
-							eventInGame.s8t3id0,
-							
-							//S9
-							eventInGame.s9t1id1,
-							eventInGame.s9t1id2,
-							eventInGame.s9t1id3,
-							
-							//S10
-							eventInGame.s10t0id2,
-							
-							//S12
-							eventInGame.s12t3id0,
-							eventInGame.s12t3id1
-							);
-					
-					game.prefs.saveInventory(player.getListItem().size, player.getListItem());
-				}
-				else
-				{
-					defaultText = "[YELLOW]system:[]\ncan't save if the bomb is planted.";
-					canDefaultText = true;
-				}
-				canSaveProgress = false;
-			}
 			
 			/*if (Gdx.input.isKeyJustPressed(Keys.R))
 			{
@@ -741,6 +734,7 @@ public class GameScreen extends ScreenInterface implements FinalStates, LightCol
 			}
 			else
 			{
+				game.isNewGame = false;
 				game.setScreen(new GameScreen(game));
 			}
 		}
