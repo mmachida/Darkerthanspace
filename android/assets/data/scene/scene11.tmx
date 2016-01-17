@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="5" tilewidth="32" tileheight="32" nextobjectid="44">
+ <properties>
+  <property name="scene" value="11"/>
+  <property name="showlight" value="1"/>
+ </properties>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" spacing="4" tilecount="784">
+  <image source="tileset.png" width="1024" height="1024"/>
+ </tileset>
+ <layer name="tile1" width="12" height="5">
+  <data encoding="base64">
+   IwAAACQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAAlAAAAPwAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABBAAAAPwAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABBAAAAWwAAAFwAAABcAAAAXAAAAFwAAABcAAAAXAAAAFwAAABcAAAAXAAAAFwAAABdAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAA
+  </data>
+ </layer>
+ <layer name="tile2" width="12" height="5">
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI0AAADKAAAAygAAAMoAAADKAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAAAAAAKkAAABVAAAAVQAAAFUAAABVAAAAAAAAAHEAAABzAAAAdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <layer name="tile3" width="12" height="5">
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJEAAACSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK0AAACuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+ <objectgroup name="objcollision">
+  <object id="2" x="0" y="130" width="384" height="30">
+   <properties>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="27" x="0" y="64" width="2" height="64">
+   <properties>
+    <property name="typeid" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="objpath"/>
+ <objectgroup name="objact">
+  <properties>
+   <property name="parts" value="2"/>
+   <property name="type" value="1"/>
+   <property name="typeid" value="0"/>
+  </properties>
+  <object id="8" x="0" y="64" width="4" height="64">
+   <properties>
+    <property name="nextdoor" value="0"/>
+    <property name="nextscene" value="12"/>
+    <property name="side" value="2"/>
+    <property name="type" value="0"/>
+    <property name="typeid" value="1"/>
+   </properties>
+  </object>
+  <object id="31" x="144" y="16" width="64" height="64">
+   <properties>
+    <property name="type" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="38" x="328" y="64" width="4" height="64">
+   <properties>
+    <property name="nextdoor" value="1"/>
+    <property name="nextscene" value="10"/>
+    <property name="side" value="1"/>
+    <property name="type" value="0"/>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="39" x="172" y="72" width="8" height="56">
+   <properties>
+    <property name="parts" value="2"/>
+    <property name="type" value="1"/>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="41" x="140" y="72" width="8" height="56">
+   <properties>
+    <property name="parts" value="2"/>
+    <property name="type" value="1"/>
+    <property name="typeid" value="1"/>
+   </properties>
+  </object>
+  <object id="42" x="108" y="72" width="8" height="56">
+   <properties>
+    <property name="parts" value="2"/>
+    <property name="type" value="1"/>
+    <property name="typeid" value="2"/>
+   </properties>
+  </object>
+  <object id="43" x="76" y="72" width="8" height="56">
+   <properties>
+    <property name="parts" value="3"/>
+    <property name="type" value="1"/>
+    <property name="typeid" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="tiledefinition" width="12" height="5" visible="0" opacity="0.9">
+  <data encoding="base64">
+   BAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAYAAAAEAAAABAAAAAQAAAAEAAAABAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAA
+  </data>
+ </layer>
+</map>

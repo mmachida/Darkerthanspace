@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="8" height="5" tilewidth="32" tileheight="32" nextobjectid="37">
+ <properties>
+  <property name="scene" value="12"/>
+  <property name="showlight" value="1"/>
+ </properties>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" spacing="4" tilecount="784">
+  <image source="tileset.png" width="1024" height="1024"/>
+ </tileset>
+ <layer name="tile1" width="8" height="5">
+  <data encoding="base64">
+   IwAAACQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACUAAAA/AAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQQAAAD8AAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABBAAAAWwAAAFwAAABcAAAAXAAAAFwAAABcAAAAXAAAAF0AAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAA==
+  </data>
+ </layer>
+ <layer name="tile2" width="8" height="5">
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5gAAAOcAAADoAAAA6QAAAOoAAADrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAAAAAAAAAAABxAAAAcgAAAHMAAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+  </data>
+ </layer>
+ <objectgroup name="objcollision">
+  <object id="2" x="0" y="130" width="256" height="30">
+   <properties>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="31" x="254" y="64" width="2" height="64">
+   <properties>
+    <property name="typeid" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="objpath"/>
+ <objectgroup name="objact">
+  <object id="8" x="252" y="64" width="4" height="64">
+   <properties>
+    <property name="nextdoor" value="1"/>
+    <property name="nextscene" value="11"/>
+    <property name="side" value="2"/>
+    <property name="type" value="0"/>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="24" x="46" y="41" width="16" height="16">
+   <properties>
+    <property name="type" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="25" x="194" y="40" width="16" height="16">
+   <properties>
+    <property name="type" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="26" x="136" y="86" width="16" height="16">
+   <properties>
+    <property name="itemid" value="7"/>
+    <property name="parts" value="2"/>
+    <property name="type" value="3"/>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="33" x="72" y="86" width="16" height="16">
+   <properties>
+    <property name="itemid" value="9"/>
+    <property name="parts" value="2"/>
+    <property name="type" value="3"/>
+    <property name="typeid" value="1"/>
+   </properties>
+  </object>
+  <object id="34" x="92" y="41" width="24" height="16">
+   <properties>
+    <property name="type" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="35" x="152" y="41" width="16" height="16">
+   <properties>
+    <property name="type" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="36" x="72" y="8" width="96" height="80">
+   <properties>
+    <property name="type" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <layer name="tiledefinition" width="8" height="5" visible="0" opacity="0.9">
+  <data encoding="base64">
+   BAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABQAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAFAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAUAAAAEAAAABgAAAAQAAAAEAAAABAAAAAQAAAAEAAAABQAAAA==
+  </data>
+ </layer>
+</map>

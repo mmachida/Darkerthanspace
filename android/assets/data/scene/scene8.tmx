@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="10" height="5" tilewidth="32" tileheight="32" nextobjectid="38">
+ <properties>
+  <property name="scene" value="8"/>
+  <property name="showlight" value="1"/>
+ </properties>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" spacing="4" tilecount="784">
+  <image source="tileset.png" width="1024" height="1024"/>
+ </tileset>
+ <layer name="tile1" width="10" height="5">
+  <data encoding="base64">
+   PQAAAD4AAAA9AAAAPQAAAD0AAAAiAAAAIQAAAD0AAAA7AAAAIgAAACIAAAAhAAAAIQAAADsAAAAhAAAAPQAAACEAAAA+AAAAPQAAAD4AAAA7AAAAjwAAAD0AAAAiAAAAIQAAADsAAAAhAAAAIQAAACIAAAA9AAAAIgAAAKsAAAA9AAAAIgAAACEAAAA8AAAAIgAAAD0AAAA7AAAAIgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAA=
+  </data>
+ </layer>
+ <layer name="tile2" width="10" height="5">
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+  </data>
+ </layer>
+ <objectgroup name="objcollision">
+  <object id="2" x="0" y="130" width="320" height="30">
+   <properties>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="27" x="318" y="64" width="2" height="64">
+   <properties>
+    <property name="typeid" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="objpath"/>
+ <objectgroup name="objact">
+  <object id="8" x="316" y="64" width="4" height="64">
+   <properties>
+    <property name="nextdoor" value="0"/>
+    <property name="nextscene" value="9"/>
+    <property name="side" value="2"/>
+    <property name="type" value="0"/>
+    <property name="typeid" value="1"/>
+   </properties>
+  </object>
+  <object id="31" x="144" y="16" width="64" height="64">
+   <properties>
+    <property name="type" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="32" x="168" y="80" width="16" height="16">
+   <properties>
+    <property name="itemid" value="5"/>
+    <property name="parts" value="2"/>
+    <property name="type" value="3"/>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+  <object id="37" x="44" y="64" width="8" height="64">
+   <properties>
+    <property name="nextdoor" value="1"/>
+    <property name="nextscene" value="7"/>
+    <property name="side" value="0"/>
+    <property name="type" value="0"/>
+    <property name="typeid" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="tiledefinition" width="10" height="5" visible="0" opacity="0.9">
+  <data encoding="base64">
+   BAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAFAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABQAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAUAAAAEAAAABAAAAAQAAAAGAAAABAAAAAQAAAAEAAAABAAAAAQAAAAFAAAABAAAAAQAAAA=
+  </data>
+ </layer>
+</map>
